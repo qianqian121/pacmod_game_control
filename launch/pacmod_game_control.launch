@@ -4,11 +4,11 @@
 
   <!-- Vehicle type 0 is Polaris GEM, type 1 is Polaris Ranger,
        type 3 is International Prostar+ 122 -->
-  <arg name="vehicle_type" default="0"/>
+  <arg name="vehicle_type" default="4"/>
 
-  <arg name="pacmod_can_hardware_id" default="12345" />
+  <arg name="pacmod_can_hardware_id" default="30282" />
   <arg name="pacmod_can_circuit_id" default="0" />
-  <arg name="pacmod_vehicle_type" default="POLARIS_GEM" />
+  <arg name="pacmod_vehicle_type" default="AUDI_A3_ETRON" />
     
   <!-- Axis 3 is right thumbstick, 0 is left thumbstick -->
   <arg name="steering_axis" default="0"/>

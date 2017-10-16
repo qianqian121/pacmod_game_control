@@ -253,7 +253,7 @@ void callback_joy(const sensor_msgs::Joy::ConstPtr& msg)
       // Logitech right trigger (axis 5): not pressed = 1.0, fully pressed = -1.0
       pacmod_msgs::PacmodCmd accelerator_cmd_pub_msg;
 
-      if (vehicle_type == 2)
+      if (vehicle_type == 2 || vehicle_type == 4)
         accelerator_cmd_pub_msg.f64_cmd = (-0.5*(msg->axes[5]-1.0));
       else
         accelerator_cmd_pub_msg.f64_cmd = (-0.5*(msg->axes[5]-1.0))*0.6+0.21;
@@ -413,7 +413,8 @@ int main(int argc, char *argv[]) {
     if (vehicle_type != 0 &&
         vehicle_type != 1 &&
         vehicle_type != 2 &&
-        vehicle_type != 3)
+        vehicle_type != 3 &&
+        vehicle_type != 4)
     {
       ROS_INFO("vehicle_type is invalid");
       willExit = true;
